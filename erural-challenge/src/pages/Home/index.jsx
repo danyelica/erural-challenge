@@ -1,15 +1,22 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import ColorButton from "../../components/ColorButton";
 import "./style.css";
 
-export default function Home() {
-  const roomId = Math.floor(Math.random() * 1000);
-  const room = `/room?id=${roomId}`;
+export default function Home({ room, setRoom, roomId, setRoomId }) {
+  useEffect(() => {
+    setRoomId(Math.floor(Math.random() * 1000));
+  }, []);
+
+  useEffect(() => {
+    setRoom(`/room?id=${roomId}`);
+  }, [roomId]);
 
   return (
-    <div className='App'>
-      <Link to={room}>
-        <button>Criar sala</button>
+    <section className='home'>
+      <Link to={room} className='home__button'>
+        <ColorButton variant='contained'>Criar sala</ColorButton>
       </Link>
-    </div>
+    </section>
   );
 }
