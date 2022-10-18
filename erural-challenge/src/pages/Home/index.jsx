@@ -1,26 +1,15 @@
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
-import api from "../../services/api";
 
 export default function Home() {
-  useEffect(() => {
-    load();
-  }, []);
+  const roomId = Math.floor(Math.random() * 1000);
+  const room = `/room?id=${roomId}`;
 
-  async function load() {
-    const arr_search = {
-      part: "snippet",
-      type: "video",
-      maxResults: 10,
-      q: "gatos",
-    };
-    const response = await api.get(
-      "/search?key=AIzaSyB-NR65UCbbhKPvEOFDw5ga-iNxJZlckBA",
-      { params: arr_search }
-    );
-
-    console.log(response);
-  }
-
-  return <div className='App'>opa</div>;
+  return (
+    <div className='App'>
+      <Link to={room}>
+        <button>Criar sala</button>
+      </Link>
+    </div>
+  );
 }
