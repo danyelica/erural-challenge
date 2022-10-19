@@ -16,12 +16,7 @@ export default function UserCard({ roomId }) {
       <form className='usercard__container'>
         <Typography variant='h5'>Entrar como: {username.current}</Typography>
         <Typography variant='h6'>Ou insira abaixo</Typography>
-        <input
-          id='username'
-          label='digite seu user'
-          variant='outlined'
-          ref={username}
-        />
+        <input id='username' ref={username} />
         <ColorButton onClick={() => saveUsername()}>Salvar</ColorButton>
       </form>
     </section>

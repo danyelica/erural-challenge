@@ -6,3 +6,28 @@
 
   width: 50%;
 }
+
+.form__input {
+  padding: 16.5px 14px;
+  width: 90%;
+}
+
+.bottom__section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.search__title {
+  margin-top: 20px;
+}
+
+.search__container {
+  cursor: pointer;
+
+  margin-top: 20px;
+  padding: 10px;
+  width: 340px;
+
+  border: 1px solid #d4d4d4;
+}
