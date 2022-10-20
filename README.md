@@ -9,4 +9,4 @@ Siga esses passos no terminal para rodar a aplicação:<br>
 ``npm run dev``
 
 ## Importante
-- Foi desenvolvida uma api mas infelizmente não consegui implementar sem bugs à tempo. O repositório da api está [aqui](https://dany-api-erural.herokuapp.com/).
+- Foi desenvolvida uma api mas infelizmente não consegui implementar sem bugs em tempo. O repositório da api está [aqui](https://dany-api-erural.herokuapp.com/).
